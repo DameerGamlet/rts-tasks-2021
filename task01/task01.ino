@@ -5,7 +5,7 @@
 #define led10 10
 #define led11 11
 
-int interval3 = 50, interval5 = 100, interval6 = 200, interval9 = 400, interval10 = 800, interval11 = 1600;
+long interval3 = 50000, interval5 = 100000, interval6 = 200000, interval9 = 400000, interval10 = 800000, interval11 = 1600000;
 int ledState3 = LOW, ledState5 = LOW, ledState6 = LOW, ledState9 = LOW, ledState10 = LOW, ledState11 = LOW;
 unsigned long previousMillis3 = 0, previousMillis5 = 0, previousMillis6 = 0, previousMillis9 = 0, previousMillis10 = 0, previousMillis11 = 0;
 
@@ -19,7 +19,7 @@ void setup() {
 }
 
 void loop() {
-  unsigned long currentMillis3 = millis();
+  unsigned long currentMillis3 = micros();
   if (currentMillis3 - previousMillis3 >= interval3) {
     previousMillis3 = currentMillis3;
     if (ledState3 == LOW) {
@@ -30,7 +30,7 @@ void loop() {
     digitalWrite(led3, ledState3);
   }
 
-    unsigned long currentMillis5 = millis();
+    unsigned long currentMillis5 = micros();
   if (currentMillis5 - previousMillis5 >= interval5) {
     previousMillis5 = currentMillis5;
     if (ledState5 == LOW) {
@@ -41,7 +41,7 @@ void loop() {
     digitalWrite(led5, ledState5);
   }
 
-    unsigned long currentMillis6 = millis();
+    unsigned long currentMillis6 = micros();
   if (currentMillis6 - previousMillis6 >= interval6) {
     previousMillis6 = currentMillis6;
     if (ledState6 == LOW) {
@@ -52,7 +52,7 @@ void loop() {
     digitalWrite(led6, ledState6);
   }
 
-    unsigned long currentMillis9 = millis();
+    unsigned long currentMillis9 = micros();
   if (currentMillis9 - previousMillis9 >= interval9) {
     previousMillis9 = currentMillis9;
     if (ledState9 == LOW) {
@@ -63,7 +63,7 @@ void loop() {
     digitalWrite(led9, ledState9);
   }
 
-    unsigned long currentMillis10 = millis();
+    unsigned long currentMillis10 = micros();
   if (currentMillis10 - previousMillis10 >= interval10) {
     previousMillis10 = currentMillis10;
     if (ledState10 == LOW) {
@@ -74,7 +74,7 @@ void loop() {
     digitalWrite(led10, ledState10);
   }
 
-    unsigned long currentMillis11 = millis();
+    unsigned long currentMillis11 = micros();
   if (currentMillis11 - previousMillis11 >= interval11) {
     previousMillis11 = currentMillis11;
     if (ledState11 == LOW) {
