@@ -5,9 +5,19 @@
 #define led10 10
 #define led11 11
 
-long interval3 = 50000, interval5 = 100000, interval6 = 200000, interval9 = 400000, interval10 = 800000, interval11 = 1600000;
+long interval3 = 10000, 
+     interval5 = 50000, 
+     interval6 = 100000, 
+     interval9 = 200000, 
+     interval10 = 400000, 
+     interval11 = 800000;
 int ledState = LOW;
-unsigned long previousMillis3 = 0, previousMillis5 = 0, previousMillis6 = 0, previousMillis9 = 0, previousMillis10 = 0, previousMillis11 = 0;
+unsigned long previousMillis3 = 0, 
+              previousMillis5 = 0, 
+              previousMillis6 = 0, 
+              previousMillis9 = 0, 
+              previousMillis10 = 0, 
+              previousMillis11 = 0;
 
 void setup() {
   pinMode(led3, OUTPUT);
