@@ -5,13 +5,13 @@
 #define led10 10
 #define led11 11
 
-long interval3 = 10000, 
-     interval5 = 50000, 
-     interval6 = 100000, 
-     interval9 = 200000, 
-     interval10 = 400000, 
-     interval11 = 800000;
-int ledState = LOW;
+long interval3 = 500000, 
+     interval5 = 400000, 
+     interval6 = 10000, 
+     interval9 = 250000, 
+     interval10 = 200000, 
+     interval11 = 100000;
+int ledState3 = LOW, ledState5 = LOW, ledState6 = LOW, ledState9 = LOW, ledState10 = LOW, ledState11 = LOW;
 unsigned long previousMillis3 = 0, 
               previousMillis5 = 0, 
               previousMillis6 = 0, 
@@ -32,61 +32,61 @@ void loop() {
   unsigned long currentMillis = micros();
   if (currentMillis - previousMillis3 >= interval3) {
     previousMillis3 = currentMillis;
-    if (ledState == LOW) {
-      ledState = HIGH;
+    if (ledState3 == LOW) {
+      ledState3 = HIGH;
     } else {
-      ledState = LOW;
+      ledState3 = LOW;
     }
-    digitalWrite(led3, ledState);
+    digitalWrite(led3, ledState3);
   }
 
   if (currentMillis - previousMillis5 >= interval5) {
     previousMillis5 = currentMillis;
-    if (ledState == LOW) {
-      ledState = HIGH;
+    if (ledState5 == LOW) {
+      ledState5 = HIGH;
     } else {
-      ledState = LOW;
+      ledState5 = LOW;
     }
-    digitalWrite(led5, ledState);
+    digitalWrite(led5, ledState5);
   }
 
   if (currentMillis - previousMillis6 >= interval6) {
     previousMillis6 = currentMillis;
-    if (ledState == LOW) {
-      ledState = HIGH;
+    if (ledState6 == LOW) {
+      ledState6 = HIGH;
     } else {
-      ledState = LOW;
+      ledState6 = LOW;
     }
-    digitalWrite(led6, ledState);
+    digitalWrite(led6, ledState6);
   }
 
   if (currentMillis - previousMillis9 >= interval9) {
     previousMillis9 = currentMillis;
-    if (ledState == LOW) {
-      ledState = HIGH;
+    if (ledState9 == LOW) {
+      ledState9 = HIGH;
     } else {
-      ledState = LOW;
+      ledState9 = LOW;
     }
-    digitalWrite(led9, ledState);
+    digitalWrite(led9, ledState9);
   }
   
   if (currentMillis - previousMillis10 >= interval10) {
     previousMillis10 = currentMillis;
-    if (ledState == LOW) {
-      ledState = HIGH;
+    if (ledState10 == LOW) {
+      ledState10 = HIGH;
     } else {
-      ledState = LOW;
+      ledState10 = LOW;
     }
-    digitalWrite(led10, ledState);
+    digitalWrite(led10, ledState10);
   }
 
   if (currentMillis - previousMillis11 >= interval11) {
     previousMillis11 = currentMillis;
-    if (ledState == LOW) {
-      ledState = HIGH;
+    if (ledState11 == LOW) {
+      ledState11 = HIGH;
     } else {
-      ledState = LOW;
+      ledState11 = LOW;
     }
-    digitalWrite(led11, ledState);
+    digitalWrite(led11, ledState11);
   }
 }
